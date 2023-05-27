@@ -8,6 +8,7 @@ import jade.domain.DFService;
 import jade.domain.FIPAAgentManagement.DFAgentDescription;
 import jade.domain.FIPAAgentManagement.ServiceDescription;
 import jade.domain.FIPAException;
+import jade.lang.acl.ACLMessage;
 import ma.enset.ga.sequencial.GAUtils;
 import ma.enset.ga.sequencial.Individual;
 
@@ -47,6 +48,28 @@ public class IslandAgent extends Agent {
             @Override
             public boolean done() {
                 return  GAUtils.MAX_IT==iter || getBestFintness()==GAUtils.CHROMOSOME_SIZE;
+            }
+        });
+        sequentialBehaviour.addSubBehaviour(new OneShotBehaviour() {
+            @Override
+            public void action() {
+                DFAgentDescription dfAgentDescription = new DFAgentDescription();
+                ServiceDescription serviceDescription = new ServiceDescription();
+                serviceDescription.setType("ga");
+                dfAgentDescription.addServices(serviceDescription);
+                DFAgentDescription[] dfAgentDescriptions;
+                try {
+                    dfAgentDescriptions = DFService.search(getAgent(),dfAgentDescription);
+                } catch (FIPAException e) {
+                    throw new RuntimeException(e);
+                }
+
+                ACLMessage aclMessage = new ACLMessage(ACLMessage.INFORM);
+                aclMessage.addReceiver(dfAgentDescriptions[0].getName());
+                aclMessage.setContent(Arrays.toString(population[0].getGenes())+" "+String.valueOf(population[0].getFitness()));
+                send(aclMessage);
+
+
             }
         });
         addBehaviour(sequentialBehaviour);
