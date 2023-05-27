@@ -28,7 +28,7 @@ public class MasterAgent extends Agent {
                  ACLMessage receive = receive();
                  if (receive!=null)
                  {
-                     System.out.println(receive.getSender()+" "+receive.getContent());
+                     System.out.println(receive.getSender().getName()+" "+receive.getContent());
                  }
                  else {
                      block();
