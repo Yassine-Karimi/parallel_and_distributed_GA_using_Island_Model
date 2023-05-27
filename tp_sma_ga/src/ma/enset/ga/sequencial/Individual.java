@@ -1,5 +1,6 @@
 package ma.enset.ga.sequencial;
 
+import java.util.Arrays;
 import java.util.Random;
 
 public class Individual implements Comparable{
@@ -13,6 +14,9 @@ public class Individual implements Comparable{
         for (int i=0;i<genes.length;i++){
             genes[i]= GAUtils.CHARATERS.charAt(rnd.nextInt(GAUtils.CHARATERS.length()));
         }
+    }
+    public Individual(char[] chromosome) {
+        this.genes = Arrays.copyOf(chromosome,GAUtils.CHROMOSOME_SIZE);
     }
     public void calculateFitness(){
         fitness=0;
