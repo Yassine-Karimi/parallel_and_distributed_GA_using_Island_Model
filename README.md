@@ -1,4 +1,5 @@
-# parallel_and_distributed_GA🧬_using_Island_Model
+<h1 style="background-color:orange;font-family:newtimeroman;font-size:350%;text-align:center;border-radius: 15px 50px;">parallel_and_distributed_GA🧬_using_Island_Model</h1>
+
 ## Project structure
 
 ![image](https://github.com/Yassine-Karimi/parallel_and_distributed_GA_using_Island_Model/assets/66490404/b46e7894-09c5-4669-b339-f613b05b5db1)
