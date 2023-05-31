@@ -3,18 +3,10 @@
 <h1 style="background-color:orange;font-family:newtimeroman;font-size:350%;text-align:center;border-radius: 15px 50px;">Table Of Content</h1>
 
 
-* [1. Introduction](#1)
-    * [1.1 Libraries And Utilities](#1.1)
-    * [1.2 Data Loading](#1.2)
-* [2. Exploratory Data Analysis(EDA)](#2)
-* [3. Data Preprocessing](#3)
-    * [3.1 Data Upsampling Using SMOTE](#3.1)
-    * [3.2 Principal Component Analysis Of One Hot Encoded Data](#3.2)  
-* [4. Model Selection And Evaluation](#4) 
-    * [4.1 Cross Validation](#4.1)
-    * [4.2 Model Evaluation](#4.2)
-    * [4.3 Model Evaluation On Original Data (Before Upsampling)](#4.3)
-* [5. Results](#5) 
+* [1. Introduction](#1)   
+* [2. Project structure](#2)
+* [3. Model Architecture](#3)    
+* [4. Results](#4) 
 
 
 
