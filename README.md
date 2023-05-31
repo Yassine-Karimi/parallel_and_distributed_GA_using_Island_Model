@@ -42,3 +42,7 @@ The islands operate independently, performing the standard Genetic Algorithm ope
 ## 4 Results
 As an example of applying this implementation we gonna choose a string target, let it be "Bonjour SDIA" and the result is :
 ![image](https://github.com/Yassine-Karimi/parallel_and_distributed_GA_using_Island_Model/assets/66490404/2659dd64-446f-45f8-8899-baca71fa5062)
+
+
+ so in this example it's seems like that there's two agents that succed !
+
